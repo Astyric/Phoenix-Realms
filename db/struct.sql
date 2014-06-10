@@ -22,7 +22,7 @@ CREATE TABLE IF NOT EXISTS `accounts` (
   `password` varchar(256) NOT NULL,
   `name` varchar(64) NOT NULL DEFAULT 'DEFAULT',
   `rank` int(11) NOT NULL DEFAULT '0',
-  `tag` varchar(12) NOT NULL,
+  `tag` varchar(12) NOT NULL DEFAULT 'P',
   `namechosen` tinyint(1) NOT NULL DEFAULT '0',
   `verified` tinyint(1) NOT NULL DEFAULT '1',
   `guild` int(11) NOT NULL,
@@ -36,8 +36,7 @@ CREATE TABLE IF NOT EXISTS `accounts` (
   `locked` varchar(512) NOT NULL,
   `ignored` varchar(512) NOT NULL,
   `bonuses` varchar(512) NOT NULL,
-  `lastip` varchar(15) NOT NULL,
-  PRIMARY KEY (`id`,`tag`,`lastip`)
+  PRIMARY KEY (`id`,`tag`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- Data exporting was unselected.
