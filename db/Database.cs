@@ -40,7 +40,7 @@ namespace db
         {
             	 _con = Testing
 	               ? new MySqlConnection( /* Testing = true; */
-                     "Server=999.999.99.999;Database=rotmg;uid=root;password=CHANGEME;Pooling=true;Connection Timeout=30;MinimumPoolSize=5;maximumpoolsize=10;")
+                     "Server=127.0.0.1;Database=rotmg;uid=root;password=CHANGEME;Pooling=true;Connection Timeout=30;MinimumPoolSize=5;maximumpoolsize=10;")
 	               : new MySqlConnection( /* Testing = false; */
                      "Server=127.0.0.1;Database=rotmg;uid=root;password=CHANGEME;Pooling=true;Connection Timeout=30;MinimumPoolSize=5;maximumpoolsize=10;");
                _con.Open();
